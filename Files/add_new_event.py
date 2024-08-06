@@ -318,7 +318,7 @@ def Navigate_to_AddArtist():
     import  add_new_artist
 
 Admin_btn = ctk.CTkButton(app,
-                           text="Atist Configurations ",
+                           text="Artist Configurations ",
                            corner_radius=10,
                            font=font3,
                            fg_color='#9C6644',

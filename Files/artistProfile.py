@@ -23,8 +23,8 @@ def profile_pic():
     profile_frame.pack(side='left',anchor='nw')
 
     # add the image
-    image = Image.open("images/Abstrct art.jpeg")
-    image = image.resize((150, 150))
+    image = Image.open("images/artist_profile.jfif")
+    image = image.resize((200, 200))
     photo = ImageTk.PhotoImage(image)
     label = customtkinter.CTkLabel(profile_frame, image=photo, text='')
     label.grid(row=0,column=0)
@@ -36,30 +36,14 @@ def profile_pic():
 
 
 #create the bio textbox
-bio_textbox=customtkinter.CTkTextbox(master=artistProfile,
-                                     text_color='black',
-                                     font=('consolas',16),
-                                     fg_color='#f1ede9',
-                                     bg_color=primaryColor,
-                                     border_color='#9C6644',
-                                     border_width=3,
-                                     corner_radius=0,
-                                     width=550,height=150)
+bio_textbox=customtkinter.CTkTextbox(master=artistProfile,text_color='black',font=('consolas',16),fg_color='#f1ede9',bg_color=primaryColor,border_color='#9C6644',border_width=3,corner_radius=0,width=550,height=150)
 bio_textbox.place(relx=0.745,rely=0.13,anchor='center')
 
 
 
 
 #create the paint art frame
-paint_master_frame=customtkinter.CTkScrollableFrame(master=artistProfile,
-                                                    fg_color='#EDE0D4',
-                                                    orientation='vertical',
-                                                    width=900,height=390,
-                                                    bg_color=primaryColor,
-                                                    border_color='#9C6644',
-                                                    border_width=3,corner_radius=16,
-                                                    scrollbar_button_hover_color='#7F5539',
-                                                    scrollbar_button_color='#7F5539')
+paint_master_frame=customtkinter.CTkScrollableFrame(master=artistProfile,fg_color='#EDE0D4',orientation='vertical',width=900,height=390,bg_color=primaryColor,border_color='#9C6644',border_width=3,corner_radius=16,scrollbar_button_hover_color='#7F5539',scrollbar_button_color='#7F5539')
 paint_master_frame.place(relx=0.57,rely=0.64,anchor='center')
 
 
@@ -69,7 +53,7 @@ paint_master_frame.place(relx=0.57,rely=0.64,anchor='center')
 def fetch_artist_data():
     conn = sqlite3.connect('ArtGalary.db')
     cur = conn.cursor()
-    quary='SELECT nick_name,Phone,email FROM Artist'
+    quary='SELECT nick_name,Phone,email,Bio FROM Artist'
     cur.execute(quary)
     artist_data = cur.fetchone()
     conn.close()
@@ -89,6 +73,7 @@ def add_data():
     email_lbl.place(relx=0.35,rely=0.09,anchor='center')
     lbl=customtkinter.CTkLabel(artistProfile,text='contact info :',font=("Arial Rounded MT Bold", 12),bg_color=primaryColor,text_color="black")
     lbl.place(relx=1.2,rely=3,anchor='center')
+    bio_textbox.insert(tk.END,data[3])
 
 #creat the side frame
 def navigationBar():
