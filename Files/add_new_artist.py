@@ -333,7 +333,7 @@ logout_btn.place(x=770,y=485)
 
 def Navigate_to_adminPage():
     app.destroy()
-    import AdminPage
+    import add_new_event
 
 Admin_btn = ctk.CTkButton(master,
                            text="Event Configurations ",

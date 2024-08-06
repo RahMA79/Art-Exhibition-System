@@ -225,7 +225,7 @@ def login(email, password):
         messagebox.showinfo("Success", "Logged in successfully")
         if "admin" in email:
             app.destroy()
-            import AdminPage
+            import add_new_event
         elif "artist" in email:
             app.destroy()
             import uploading_artwork

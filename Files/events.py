@@ -115,7 +115,7 @@ def update_events():
             img_tk = ImageTk.PhotoImage(image)
             event_canvas.create_image(153, 100, image=img_tk)
             event_frame.img = img_tk
-            event_text = f"{event[0]}\n{event[1]} on {event[2]}"
+            event_text = f"{event[0]}\n{event[1]}on {event[2]}"
         except:
             event_canvas.create_image(153, 100, image=coming_soon)
             event_text = "Coming Soon!"

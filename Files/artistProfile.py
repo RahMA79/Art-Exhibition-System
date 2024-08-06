@@ -36,14 +36,30 @@ def profile_pic():
 
 
 #create the bio textbox
-bio_textbox=customtkinter.CTkTextbox(master=artistProfile,text_color='black',font=('consolas',16),fg_color='#f1ede9',bg_color=primaryColor,border_color='#9C6644',border_width=3,corner_radius=0,width=550,height=150)
+bio_textbox=customtkinter.CTkTextbox(master=artistProfile,
+                                     text_color='black',
+                                     font=('consolas',16),
+                                     fg_color='#f1ede9',
+                                     bg_color=primaryColor,
+                                     border_color='#9C6644',
+                                     border_width=3,
+                                     corner_radius=0,
+                                     width=550,height=150)
 bio_textbox.place(relx=0.745,rely=0.13,anchor='center')
 
 
 
 
 #create the paint art frame
-paint_master_frame=customtkinter.CTkScrollableFrame(master=artistProfile,fg_color='#EDE0D4',orientation='vertical',width=900,height=390,bg_color=primaryColor,border_color='#9C6644',border_width=3,corner_radius=16,scrollbar_button_hover_color='#7F5539',scrollbar_button_color='#7F5539')
+paint_master_frame=customtkinter.CTkScrollableFrame(master=artistProfile,
+                                                    fg_color='#EDE0D4',
+                                                    orientation='vertical',
+                                                    width=900,height=390,
+                                                    bg_color=primaryColor,
+                                                    border_color='#9C6644',
+                                                    border_width=3,corner_radius=16,
+                                                    scrollbar_button_hover_color='#7F5539',
+                                                    scrollbar_button_color='#7F5539')
 paint_master_frame.place(relx=0.57,rely=0.64,anchor='center')
 
 
