@@ -1,5 +1,4 @@
 import sqlite3
-from tkinter import filedialog
 import ArtistConfigurations
 import customtkinter as ctk
 from tkinter import *
@@ -188,12 +187,7 @@ password_icon_label = Label(frame1, image=c_pass_photo, bg='#EDE0D4')
 password_icon_label.image = c_pass_photo
 password_icon_label.place(x=75, y=360)
 
-# # ===== pic icon =========
-# pic_icon = Image.open('images/pic-icon.png')
-# pic_photo = ImageTk.PhotoImage(pic_icon)
-# pic_icon_label = Label(frame1, image=pic_photo,  bg='#EDE0D4')
-# pic_icon_label.image = pic_photo
-# pic_icon_label.place(x=220, y)
+
 
 def register():
     username = name_entry_reg.get()
@@ -333,7 +327,7 @@ logout_btn.place(x=770,y=485)
 
 def Navigate_to_adminPage():
     app.destroy()
-    import add_new_event
+    import  add_new_event
 
 Admin_btn = ctk.CTkButton(master,
                            text="Event Configurations ",

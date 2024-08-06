@@ -1,5 +1,5 @@
 from tkinter import filedialog
-import AdminConfigurations
+import AdminConfigurations 
 import customtkinter as ctk
 from tkinter import *
 from tkinter import ttk
@@ -315,7 +315,7 @@ logout_btn.place(x=770,y=485)
 
 def Navigate_to_AddArtist():
     app.destroy()
-    import add_new_artist
+    import  add_new_artist
 
 Admin_btn = ctk.CTkButton(app,
                            text="Atist Configurations ",
