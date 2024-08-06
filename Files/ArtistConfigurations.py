@@ -14,7 +14,7 @@ def delete_artist(id,email):
     conn=sqlite3.connect("ArtGalary.db")
     cursor=conn.cursor()
     cursor.execute("DELETE FROM Artist WHERE Artist_ID = ?",(id,))
-    cursor.execute("DELETE FROM USERS WHERE email = ?",(email,))
+    cursor.execute("DELETE FROM USERS WHERE Email = ? ",(email,))
     conn.commit()
     conn.close()
 

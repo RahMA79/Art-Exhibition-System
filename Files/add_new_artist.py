@@ -217,6 +217,7 @@ def register():
             conn.commit()
             messagebox.showinfo("Success", "Artist added successfully")
             fill_treeview()
+            clear()
             
         except sqlite3.IntegrityError:
             messagebox.showerror("Error", "Username already exists")

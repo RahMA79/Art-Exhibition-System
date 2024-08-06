@@ -22,7 +22,6 @@ def new_window():
     window.geometry('1100x600')
     window.configure(bg='#EDE0D4')
     window.resizable(False, False)
-
 def navigationBar():
     nav_frame = CTK.CTkFrame(Categories,width=150,height=600,fg_color="#7F5539",bg_color="#7F5539")
     nav_frame.grid(row=0,column=0,sticky="nw") 
@@ -39,7 +38,12 @@ def navigationBar():
     categoryIcon = Image.open("images/choice.png")
     categoryIcon = categoryIcon.resize((45,45))
     profileIcon_tk = ImageTk.PhotoImage(categoryIcon)    
-    profile_btn = CTK.CTkButton(icons_frame,image=profileIcon_tk,text="Arts",bg_color="transparent",fg_color="transparent",hover_color=hovColor)
+    profile_btn = CTK.CTkButton(icons_frame,
+                                image=profileIcon_tk,
+                                text="Arts",
+                                bg_color="transparent",
+                                fg_color="transparent",
+                                hover_color=hovColor)
     profile_btn.grid(pady=(0,40))
 
     def events():
@@ -49,7 +53,10 @@ def navigationBar():
     eventIcon = Image.open("images/event.png")
     eventIcon = eventIcon.resize((50,50))
     postIcon_tk = ImageTk.PhotoImage(eventIcon)    
-    post_btn = CTK.CTkButton(icons_frame,image=postIcon_tk,text="Events",bg_color="transparent",fg_color="transparent",hover_color=hovColor,command=events)
+    post_btn = CTK.CTkButton(icons_frame,image=postIcon_tk,text="Events",
+                             bg_color="transparent",fg_color="transparent",
+                             hover_color=hovColor,
+                             command=events)
     post_btn.grid(pady=(0,40))
 
     def logout():
@@ -59,18 +66,28 @@ def navigationBar():
     logoutIcon = Image.open("images/logout .png")
     logoutIcon = logoutIcon.resize((50,50))
     logoutIcon_tk = ImageTk.PhotoImage(logoutIcon)    
-    logout_btn = CTK.CTkButton(icons_frame,image=logoutIcon_tk,text="Logout",bg_color="transparent",fg_color="transparent",hover_color=hovColor,command=logout)
+    logout_btn = CTK.CTkButton(icons_frame,image=logoutIcon_tk,
+                               text="Logout",bg_color="transparent",
+                               fg_color="transparent",
+                               hover_color=hovColor,
+                               command=logout)
     logout_btn.grid()
 
 
 navigationBar()
 
 # Create a label for the first line of text
-label1 = CTK.CTkLabel(Categories, text="Welcome to our Art Gallery!", font=("Arial", 30, 'bold'), bg_color='#EDE0D4', text_color='black')
+label1 = CTK.CTkLabel(Categories, text="Welcome to our Art Gallery!", 
+                        font=("Arial", 30, 'bold'),
+                        bg_color='#EDE0D4',
+                        text_color='black')
 label1.place(x=380, y=20)
 
 # Create a label for the second line of text
-label2 = CTK.CTkLabel(Categories, text="Select your Category", font=("Arial", 26, 'bold'), bg_color='#EDE0D4', text_color='black')
+label2 = CTK.CTkLabel(Categories, text="Select your Category",
+                        font=("Arial", 26, 'bold'),
+                        bg_color='#EDE0D4',
+                        text_color='black')
 label2.place(x=450, y=80)
 
 image1 = Image.open('images/painting art.jpeg')

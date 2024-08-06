@@ -138,6 +138,6 @@ eventsBackBtn.place(width=85, height=88)
 
 eventMasterFrame.grid(row=0,column=1,sticky="nw")
 
-update_events()  # Initial call to populate events
+update_events()  
 
 events.mainloop()
